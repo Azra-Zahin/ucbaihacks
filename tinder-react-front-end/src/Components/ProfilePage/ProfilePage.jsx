@@ -29,31 +29,31 @@ const ProfilePage = () => {
           />
         </div>
         <div className="profile-input">
-          <label>Looking for People with These Skills</label>
+          <label>School & Major</label>
           <textarea 
             value={desiredSkills} 
             onChange={(e) => setDesiredSkills(e.target.value)} 
             disabled={!isEditing} 
-            placeholder="E.g., Design, Project Management" 
+            placeholder="E.g., San Jose State University, Design 24'" 
           />
         </div>
         <div className="profile-input">
-          <label>Work Experience</label>
+          <label>Prior Experience</label>
           <textarea 
             value={workExperience} 
             onChange={(e) => setWorkExperience(e.target.value)} 
             disabled={!isEditing} 
-            placeholder="E.g., 3 years at XYZ Corp, 2 years at ABC Ltd" 
+            placeholder="E.g., CalHacks 2024 runner up, 2 years at ABC Ltd" 
           />
         </div>
         <div className="profile-input">
-          <label>Interests</label>
+          <label>Interests / Focus Area</label>
           <textarea 
             name="interests" 
             value={interests} 
             onChange={(e) => setInterests(e.target.value)} 
             disabled={!isEditing} 
-            placeholder="E.g., Reading, Hiking, Gaming" 
+            placeholder="E.g., Designing AI Models, Front End Web Development" 
           />
         </div>
         <div className="profile-input">
