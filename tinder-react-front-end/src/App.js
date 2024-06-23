@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from './Components/LandingPage/LandingPage';
 import Header from './Components/Header/Header';
 import SwipeButtons from './Components/SwipeButtons/SwipeButtons';
+import ProfilePage from './Components/ProfilePage/ProfilePage';
 import './App.css';
 
 function App() {
@@ -17,6 +18,12 @@ function App() {
               <SwipeButtons />
             </>
           } />
+          <Route path="/profile" element={
+            <>
+              <Header />
+              <ProfilePage />
+            </>
+          } />
           {/* Add other routes here if needed */}
         </Routes>
       </div>
@@ -25,5 +32,7 @@ function App() {
 }
 
 export default App;
+
+
 
 

@@ -1,0 +1,96 @@
+/* src/Components/ProfilePage/ProfilePage.css */
+
+.profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding-top: 60px;
+  }
+  
+  .profile-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 500px;
+  }
+  
+  .profile-container h1 {
+    margin-top: 0;
+    margin-bottom: 35px;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+  
+  .profile-input {
+    margin-bottom: 20px;
+  }
+  
+  .profile-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .profile-input textarea,
+  .profile-input input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    max-height: 100px;
+    overflow-y: auto;
+    margin: 0 auto;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+  
+  .profile-input textarea::placeholder,
+  .profile-input input::placeholder {
+    font-family: inherit;
+    font-size: 0.9em;
+    color: #999;
+    text-transform: lowercase;
+  }
+  
+  .profile-input textarea:disabled,
+  .profile-input input:disabled {
+    background-color: #eae8e8; 
+  }
+  
+  .profile-buttons {
+    text-align: right;
+  }
+  
+  .profile-buttons button {
+    background-color: #ff4081;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .profile-buttons button:hover {
+    background-color: #fdb3b3;
+  }
+  
+  .profile-buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+.profile-input textarea[name="interests"] {
+    height: 20px; 
+  }
+  
+  
