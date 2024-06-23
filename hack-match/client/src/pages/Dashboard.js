@@ -28,7 +28,7 @@ const Dashboard = () => {
                 params: {skill: user?.technical_skills}
             })
 
-            current_skills = response.data
+            //current_skills = response.data
             //This is an AI themed hackathon, and the current participant has the following skills:
             //What are some of the other skills are needed to create a successful team for this hackathon?
 
@@ -75,10 +75,10 @@ const Dashboard = () => {
 
     const matchedUserIds = user?.matches.map(({user_id}) => user_id).concat(userId)
 
-    const filteredGenderedUsers = genderedUsers?.filter(genderedUser => !matchedUserIds.includes(genderedUser.user_id))
+    const filteredSkilledUsers = skilledUsers?.filter(skilledUser => !matchedUserIds.includes(skilledUser.user_id))
 
 
-    console.log('filteredGenderedUsers ', filteredGenderedUsers)
+    console.log('filteredSkilledUsers ', filteredSkilledUsers)
     return (
         <>
             {user &&
@@ -87,16 +87,16 @@ const Dashboard = () => {
                 <div className="swipe-container">
                     <div className="card-container">
 
-                        {filteredGenderedUsers?.map((genderedUser) =>
+                        {filteredSkilledUsers?.map((skilledUser) =>
                             <TinderCard
                                 className="swipe"
-                                key={genderedUser.user_id}
-                                onSwipe={(dir) => swiped(dir, genderedUser.user_id)}
-                                onCardLeftScreen={() => outOfFrame(genderedUser.first_name)}>
+                                key={skilledUser.user_id}
+                                onSwipe={(dir) => swiped(dir, skilledUser.user_id)}
+                                onCardLeftScreen={() => outOfFrame(skilledUser.first_name)}>
                                 <div
-                                    style={{backgroundImage: "url(" + genderedUser.url + ")"}}
+                                    style={{backgroundImage: "url(" + skilledUser.url + ")"}}
                                     className="card">
-                                    <h3>{genderedUser.first_name}</h3>
+                                    <h3>{skilledUser.first_name}</h3>
                                 </div>
                             </TinderCard>
                         )}
