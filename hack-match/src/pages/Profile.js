@@ -9,15 +9,20 @@ const Profile = () => {
     const [formData, setFormData] = useState({
         user_id: cookies.UserId,
         first_name: "",
-        dob_day: "",
-        dob_month: "",
-        dob_year: "",
-        show_gender: false,
-        gender_identity: "man",
-        gender_interest: "woman",
+        last_name: "",
+        school: "",
+        email: "",
+        technical_skills: "",
+        //dob_day: "",
+        // dob_month: "",
+        // dob_year: "",
+        // show_gender: false,
+        // gender_identity: "man",
+        // gender_interest: "woman",
         url: "",
         about: "",
         matches: []
+        //ADD OTHER MEMBERS?
 
     })
 
@@ -73,112 +78,50 @@ const Profile = () => {
                             onChange={handleChange}
                         />
 
-                        <label>Birthday</label>
-                        <div className="multiple-input-container">
-                            <input
-                                id="dob_day"
-                                type="number"
-                                name="dob_day"
-                                placeholder="DD"
-                                required={true}
-                                value={formData.dob_day}
-                                onChange={handleChange}
-                            />
-
-                            <input
-                                id="dob_month"
-                                type="number"
-                                name="dob_month"
-                                placeholder="MM"
-                                required={true}
-                                value={formData.dob_month}
-                                onChange={handleChange}
-                            />
-
-                            <input
-                                id="dob_year"
-                                type="number"
-                                name="dob_year"
-                                placeholder="YYYY"
-                                required={true}
-                                value={formData.dob_year}
-                                onChange={handleChange}
-                            />
-                        </div>
-
-                        <label>Gender</label>
-                        <div className="multiple-input-container">
-                            <input
-                                id="man-gender-identity"
-                                type="radio"
-                                name="gender_identity"
-                                value="man"
-                                onChange={handleChange}
-                                checked={formData.gender_identity === "man"}
-                            />
-                            <label htmlFor="man-gender-identity">Man</label>
-                            <input
-                                id="woman-gender-identity"
-                                type="radio"
-                                name="gender_identity"
-                                value="woman"
-                                onChange={handleChange}
-                                checked={formData.gender_identity === "woman"}
-                            />
-                            <label htmlFor="woman-gender-identity">Woman</label>
-                            <input
-                                id="more-gender-identity"
-                                type="radio"
-                                name="gender_identity"
-                                value="more"
-                                onChange={handleChange}
-                                checked={formData.gender_identity === "more"}
-                            />
-                            <label htmlFor="more-gender-identity">More</label>
-                        </div>
-
-                        <label htmlFor="show-gender">Show Gender on my Profile</label>
-
+                        <label htmlFor="last_name">Last Name</label>
                         <input
-                            id="show-gender"
-                            type="checkbox"
-                            name="show_gender"
+                            id="last_name"
+                            type='text'
+                            name="last_name"
+                            placeholder="Last Name"
+                            required={true}
+                            value={formData.last_name}
                             onChange={handleChange}
-                            checked={formData.show_gender}
                         />
 
-                        <label>Show Me</label>
+                        <label htmlFor="school">School</label>
+                        <input
+                            id="school"
+                            type='text'
+                            name="school"
+                            placeholder="school"
+                            required={true}
+                            value={formData.school}
+                            onChange={handleChange}
+                        />
 
-                        <div className="multiple-input-container">
-                            <input
-                                id="man-gender-interest"
-                                type="radio"
-                                name="gender_interest"
-                                value="man"
-                                onChange={handleChange}
-                                checked={formData.gender_interest === "man"}
-                            />
-                            <label htmlFor="man-gender-interest">Man</label>
-                            <input
-                                id="woman-gender-interest"
-                                type="radio"
-                                name="gender_interest"
-                                value="woman"
-                                onChange={handleChange}
-                                checked={formData.gender_interest === "woman"}
-                            />
-                            <label htmlFor="woman-gender-interest">Woman</label>
-                            <input
-                                id="everyone-gender-interest"
-                                type="radio"
-                                name="gender_interest"
-                                value="everyone"
-                                onChange={handleChange}
-                                checked={formData.gender_interest === "everyone"}
-                            />
-                            <label htmlFor="everyone-gender-interest">Everyone</label>
+                        <label htmlFor="email">Email</label>
+                        <input
+                            id="email"
+                            type='text'
+                            name="email"
+                            placeholder="email"
+                            required={true}
+                            value={formData.email}
+                            onChange={handleChange}
+                        />
 
-                        </div>
+                        <label htmlFor="technical_skills">Technical Skills</label>
+                        <input
+                            id="technical_skills"
+                            type="text"
+                            name="technical_skills"
+                            required={true}
+                            placeholder="Languages, frameworks, tools..."
+                            value={formData.tech_skills}
+                            onChange={handleChange}
+                        />
+
 
                         <label htmlFor="about">About me</label>
                         <input
@@ -195,9 +138,10 @@ const Profile = () => {
                     </section>
 
                     <section>
-
+                        
                         <label htmlFor="url">Profile Photo</label>
                         <input
+                            //WARNING: READ DOCUMENTATION TO UPLOAD FILES INSTEAD OF URLS
                             type="url"
                             name="url"
                             id="url"
