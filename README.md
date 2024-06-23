@@ -2,7 +2,7 @@
 
 To start:
 
-navigate to tinder-react-font-end file
+navigate to the 'tinder-react-front-end' folder
 
 Run:
 
