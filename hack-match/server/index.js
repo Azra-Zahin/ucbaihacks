@@ -163,15 +163,14 @@ app.get('/users', async (req, res) => {
 // Get all the Gendered Users in the Database
 app.get('/skilled-users', async (req, res) => {
     const client = new MongoClient(uri)
-    const skill = req.query.technical_skills
+    //get other person's skills
+    const skill = (req.query.technical_skills).toArray()
 
     try {
         await client.connect()
         const database = client.db('app-data')
         const users = database.collection('users')
-        //CHANGE TO SKILL FILTER
-        const query = {gender_identity: {$eq: gender}}
-        
+        const query = {technical_skills: {$in: skill}}
         const foundUsers = await users.find(query).toArray()
         res.json(foundUsers)
 

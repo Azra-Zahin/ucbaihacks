@@ -27,6 +27,11 @@ const Dashboard = () => {
             const response = await axios.get('http://localhost:8000/skilled-users', {
                 params: {skill: user?.technical_skills}
             })
+
+            current_skills = response.data
+            //This is an AI themed hackathon, and the current participant has the following skills:
+            //What are some of the other skills are needed to create a successful team for this hackathon?
+
             setSkilledUsers(response.data)
         } catch (error) {
             console.log(error)
