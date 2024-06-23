@@ -1,0 +1,37 @@
+.SwipeButtons {
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: auto;
+  gap: 2em;
+}
+
+.SwipeButtons__Button {
+  padding: 2.5vh;
+  border-radius: 50%;
+  background-color: rgba(171, 163, 163, 0.5);
+  /* Grey background with opacity */
+  box-shadow: 0px 10px 30px rgba(239, 227, 227, 0.2),
+    /* Subtle shadow */
+    0px 10px 53px rgba(0, 0, 0, 0.3);
+  /* More distinct shadow */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SwipeButtons__Repeat {
+  color: #5c3b03;
+}
+
+.SwipeButtons__Left {
+  color: #f5ec3e;
+}
+
+.SwipeButtons__Right {
+  color: #e88a0e;
+}

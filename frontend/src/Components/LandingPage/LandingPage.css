@@ -1,0 +1,82 @@
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ff7854, #ff3558);
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    padding-top: 100px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.unbold {
+    font-weight: normal;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.terms-text {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.button {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    background-color: white;
+    color: #ff3558;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.create-account {
+    background-color: white;
+    color: #ff3558;
+}
+
+.sign-in {
+    background-color: #ff3558;
+    color: white;
+    border: 1px solid white;
+}
+
+.trouble-signing-in {
+    margin-top: 20px;
+    color: white;
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
