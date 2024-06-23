@@ -75,6 +75,10 @@ h1 {
     font-size: 1.2rem;
 }
 
+.logo {
+    width: 500px; /* Adjust the size as needed */
+    margin: 20px 0; /* Add some margin to create space around the logo */
+}
 
 
 
