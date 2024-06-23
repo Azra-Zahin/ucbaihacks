@@ -1,18 +1,29 @@
-import "./App.css";
-
-// import components
-import Header from "./Components/Header/Header";
-import SwipeButtons from "./Components/SwipeButtons/SwipeButtons";
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './Components/LandingPage/LandingPage';
+import Header from './Components/Header/Header';
+import SwipeButtons from './Components/SwipeButtons/SwipeButtons';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <SwipeButtons />
-
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={
+            <>
+              <Header />
+              <SwipeButtons />
+            </>
+          } />
+          {/* Add other routes here if needed */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
+

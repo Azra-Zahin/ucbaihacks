@@ -24,21 +24,9 @@
   background-color: white;
   box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3) !important;
 }
-.SwipeButtons__Star {
-  padding: 3vh !important;
-  color: #62b4f9 !important;
-  background-color: white;
-  box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3) !important;
-}
 .SwipeButtons__Right {
   padding: 3vh !important;
   color: #76e2b3 !important;
-  background-color: white;
-  box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3) !important;
-}
-.SwipeButtons__Lightning {
-  padding: 3vh !important;
-  color: #915dd1 !important;
   background-color: white;
   box-shadow: 0px 10px 53px 0px rgba(0, 0, 0, 0.3) !important;
 }
