@@ -1,26 +1,23 @@
+// src/Components/SignInForm/SignInForm.jsx
 import React from 'react';
-import './SignUpForm.css';
+import './SignInForm.css';
 
-function SignUpForm({ onClose }) {
+function SignInForm({ onClose }) {
   return (
-    <div className="signup-form-overlay">
-      <div className="signup-form-container">
+    <div className="signin-form-overlay">
+      <div className="signin-form-container">
         <button className="close-button" onClick={onClose}>X</button>
-        <h2 className="signup-heading">CREATE ACCOUNT</h2>
+        <h2 className="signin-heading">SIGN IN</h2>
         <form>
-          <label>Name</label>
-          <input type="text" placeholder="Name" required />
           <label>Email</label>
           <input type="email" placeholder="Enter your email" required />
           <label>Password</label>
           <input type="password" placeholder="Enter your password" required />
-          <button type="submit">SIGN UP</button>
+          <button type="submit">SIGN IN</button>
         </form>
       </div>
     </div>
   );
 }
 
-export default SignUpForm;
-
-
+export default SignInForm;

@@ -3,16 +3,23 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './LandingPage.css';
 import SignUpForm from '../SignUpForm/SignUpForm';
+import SignInForm from '../SignInForm/SignInForm';
 
 const LandingPage = () => {
     const [showSignUp, setShowSignUp] = useState(false);
+    const [showSignIn, setShowSignIn] = useState(false);
 
     const handleCreateAccountClick = () => {
         setShowSignUp(true);
     };
 
+    const handleSignInClick = () => {
+        setShowSignIn(true);
+    };
+
     const handleClose = () => {
         setShowSignUp(false);
+        setShowSignIn(false);
     };
 
     return (
@@ -24,11 +31,12 @@ const LandingPage = () => {
                 </p>
                 <div className="buttons">
                     <button onClick={handleCreateAccountClick} className="button create-account">Create account</button>
-                    <Link to="/home" className="button sign-in">Sign In</Link>
+                    <button onClick={handleSignInClick} className="button sign-in">Sign In</button>
                     <Link to="/home" className="trouble-signing-in">Trouble signing in?</Link>
                 </div>
             </div>
             {showSignUp && <SignUpForm onClose={handleClose} />}
+            {showSignIn && <SignInForm onClose={handleClose} />}
         </div>
     );
 }

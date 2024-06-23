@@ -1,5 +1,5 @@
-/* src/Components/SignUpForm/SignUpForm.css */
-.signup-form-overlay {
+/* src/Components/SignInForm/SignInForm.css */
+.signin-form-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,17 +9,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
   
-  .signup-form-container {
+.signin-form-container {
     background: white;
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 400px;
-  }
+}
   
-  .close-button {
+.close-button {
     background: none;
     border: none;
     font-size: 2.3em;
@@ -27,46 +27,45 @@
     right: 20px;
     top: 20px;
     cursor: pointer;
-  }
+}
 
-  .signup-heading {
+.signin-heading {
     font-size: 1.5rem;
     color: lightgray;
     text-align: center;
     margin-bottom: 20px;
 }
   
-  form {
+form {
     display: flex;
     flex-direction: column;
-  }
+}
   
-  label {
+label {
     margin-bottom: 10px;
     font-size: 0.9rem;
     color: black;
     text-align: left;
     font-weight: normal;
-  }
+}
   
-  input {
+input {
     margin-bottom: 20px;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1rem;
-  }
+}
   
-  button {
+button {
     background-color: #ff4081;
     color: white;
     padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+}
   
-  button:hover {
-    background-color: #fdb3b3;
-  }
-  
+button:hover {
+    background-color: #ff1a6b;
+}
