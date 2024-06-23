@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ucbaihacks/static/css/main.51e6ffe0.css",
+    "main.js": "/ucbaihacks/static/js/main.f78c33b3.js",
+    "static/media/profile-pic.jpg": "/ucbaihacks/static/media/profile-pic.fb3fa9216b7ae52bf8e2.jpg",
+    "static/media/logo.PNG": "/ucbaihacks/static/media/logo.5693cf65b2225d441c32.PNG",
+    "index.html": "/ucbaihacks/index.html",
+    "main.51e6ffe0.css.map": "/ucbaihacks/static/css/main.51e6ffe0.css.map",
+    "main.f78c33b3.js.map": "/ucbaihacks/static/js/main.f78c33b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51e6ffe0.css",
+    "static/js/main.f78c33b3.js"
+  ]
+}
