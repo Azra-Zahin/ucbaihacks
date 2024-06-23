@@ -149,7 +149,7 @@ const Profile = () => {
                             required={true}
                         />
                         <div className="photo-container">
-                            {formData.url && <img src={formData.url} alt="profile pic preview"/>}
+                            {formData.url && <img src={formData.url} alt="profile picture preview"/>}
                         </div>
 
 

@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const Dashboard = () => {
     const [user, setUser] = useState(null)
-    const [genderedUsers, setGenderedUsers] = useState(null)
+    const [skilledUsers, setSkilledUsers] = useState(null)
     const [lastDirection, setLastDirection] = useState()
     const [cookies, setCookie, removeCookie] = useCookies(['user'])
 
@@ -22,12 +22,12 @@ const Dashboard = () => {
             console.log(error)
         }
     }
-    const getGenderedUsers = async () => {
+    const getSkilledUsers = async () => {
         try {
-            const response = await axios.get('http://localhost:8000/gendered-users', {
-                params: {gender: user?.gender_interest}
+            const response = await axios.get('http://localhost:8000/skilled-users', {
+                params: {skill: user?.technical_skills}
             })
-            setGenderedUsers(response.data)
+            setSkilledUsers(response.data)
         } catch (error) {
             console.log(error)
         }
@@ -40,7 +40,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         if (user) {
-            getGenderedUsers()
+            getSkilledUsers()
         }
     }, [user])
 
