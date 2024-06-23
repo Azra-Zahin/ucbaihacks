@@ -100,23 +100,22 @@ body {
 
 .content {
     background-color: #f2c94c;
-    /* Yellow background */
     border: 2px solid black;
-    /* Black border */
     border-radius: 10px;
-    /* 50% border radius for a circular shape */
     padding: 20px;
-    /* Optional padding */
+    width: 100%;
+    /* Ensure it takes the full width of its container */
+    max-width: 800px;
+    /* Same as container to ensure alignment */
     font-family: 'Roboto', serif;
-    /* Serif font for clean look */
-    /* Ensure it sizes to its content */
     text-align: center;
-    /* Center text inside the box */
+    box-sizing: border-box;
+    margin: 0 auto 20px auto;
+    /* Center the content and add bottom margin */
 }
 
 .content strong {
     font-weight: bold;
-    /* Bold key details */
 }
 
 .all-profiles {
@@ -133,18 +132,12 @@ body {
 
 .profile-image img {
     border-radius: 30%;
-    /* Circular images */
     border: 2px solid black;
-    /* Subtle border */
     margin: 10px;
-    /* Spacing between images */
     width: 8em;
-    /* Adjusted size to make the images smaller */
     height: 8em;
-    /* Adjusted size to make the images smaller */
     object-fit: cover;
     filter: drop-shadow(30px 10px 4px black);
-    /* Ensure images are not stretched */
 }
 
 .profile-image .middle {
@@ -223,7 +216,6 @@ body {
     width: 100%;
     max-width: 800px;
     padding: 10px 20px;
-    /* Reduced top padding */
     box-sizing: border-box;
     margin: 20px 0;
     background-color: #fff;
@@ -280,7 +272,6 @@ button {
     color: #888;
     cursor: not-allowed;
     pointer-events: none;
-    /* Make the buttons non-clickable */
 }
 
 .button-active {
