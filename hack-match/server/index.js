@@ -6,9 +6,13 @@ const jwt = require('jsonwebtoken')
 const cors = require('cors')
 const bcrypt = require('bcrypt')
 require('dotenv').config()
+const { HfInference } = require("@huggingface/inference");
+const HF_ACCESS_TOKEN = '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';
+const hf = new HfInference(HF_ACCESS_TOKEN);
+const model = "deepset/roberta-base-squad2";
 
 //CHANGE THIS
-const uri = process.env.URI
+const uri = "mongodb+srv://azraz:og2abx6Oln2iUZQV@cluster0.qckvnju.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 const app = express()
 app.use(cors())
@@ -160,11 +164,17 @@ app.get('/users', async (req, res) => {
     }
 })
 
-// Get all the Gendered Users in the Database
+// Get all the users with desired skills in the Database
 app.get('/skilled-users', async (req, res) => {
     const client = new MongoClient(uri)
     //get other person's skills
-    const skill = (req.query.technical_skills).toArray()
+    const result = await hf.questionAnswering({model: model, inputs: {
+        question: 'What is a list of other skills the person is missing for the hackathon?',
+        context: 'Technical skills for an AI project include Python, C++, Java, R, JavaScript, Scala, TensorFlow, Theano, NLTK, Keras, Pytorch, Pandas, Matplotlib.'
+        }
+    });
+
+    const skill = (result.answer).toArray()
 
     try {
         await client.connect()
@@ -197,7 +207,7 @@ app.put('/user', async (req, res) => {
                 last_name: formData.last_name,
                 school: formData.school,
                 email: formData.email,
-                technical_skills: formData.technical_skills,
+                technical_skills: (formData.technical_skills).toArray,
                 url: formData.url,
                 about: formData.about,
                 matches: formData.matches
