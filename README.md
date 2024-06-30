@@ -28,3 +28,4 @@ Finally, start the project.
 
 bash $npm start 
 
+![Demo GIF](https://github.com/Azra-Zahin/ucbaihacks/blob/main/TeamUpDemo.gif?raw=true)
