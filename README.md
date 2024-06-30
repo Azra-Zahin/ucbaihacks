@@ -35,6 +35,4 @@ bash $npm start
 
 
 
-![LandingPage](https://github.com/Azra-Zahin/ucbaihacks/blob/main/home.png?raw=true)
-![SignIn](https://github.com/Azra-Zahin/ucbaihacks/blob/main/signin.png?raw=true)
-![SignUp](https://github.com/Azra-Zahin/ucbaihacks/blob/main/signup.png?raw=true)
+![LandingPage](https://github.com/Azra-Zahin/ucbaihacks/blob/main/LandingPage.gif?raw=true)
