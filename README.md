@@ -33,6 +33,7 @@ Finally, start the project.
 bash $npm start
 ```
 
+# That's it!
 
 
 ![LandingPage](https://github.com/Azra-Zahin/ucbaihacks/blob/main/LandingPage.gif?raw=true)
