@@ -8,9 +8,7 @@ Welcome to the TeamUp project! This README will guide you through the steps to r
 
 ### Step 1: Navigate to the Project Directory
 
-First, navigate to the tinder-react-front-end folder.
-
-`bash $cd tinder-react-front-end`
+First, navigate to the `tinder-react-front-end` folder.
 
 ### Step 2: Install Dependencies
 
