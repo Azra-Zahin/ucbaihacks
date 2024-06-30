@@ -30,7 +30,7 @@ npm install @material-ui/core @material-ui/icons @react-spring/web @testing-libr
 Finally, start the project.
 
 ```
-bash $npm start
+npm start
 ```
 
 # That's it!
